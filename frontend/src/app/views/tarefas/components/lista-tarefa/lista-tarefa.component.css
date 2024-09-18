@@ -1,9 +1,9 @@
 .sem-tarefas_container {
-  @apply flex flex-col items-center justify-center text-cinza-habilitado mt-16 h-screen;
+  @apply flex flex-col items-center justify-center text-cinza-habilitado py-12;
 }
 
 .sem-tarefas_container svg {
-  @apply fill-roxo-desabilitado w-36 h-36;
+  @apply w-36 h-36;
 }
 
 .sem-tarefas_titulo {
@@ -13,3 +13,16 @@
 .sem-tarefas_subtitulo {
   @apply text-xl;
 }
+
+.criadas {
+  @apply fill-roxo-desabilitado;
+}
+
+.andamento {
+  @apply fill-laranja-desabilitado
+}
+
+.concluidas {
+  @apply fill-verde-desabilitado;
+}
+

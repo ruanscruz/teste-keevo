@@ -11,6 +11,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'tarefas/criadas',
     pathMatch: 'full'
+  },
+  {
+    path: '**',
+    redirectTo: 'tarefas/criadas'
   }
 ];
 

@@ -75,6 +75,7 @@ export class TarefasComponent implements OnInit {
         if (tarefaStatusMap[status]) {
           this.listaTarefas.push(tarefa);
         }
+        this.listaTarefas.sort((a, b) => a.dataCriacao > b.dataCriacao ? -1 : 1 )
       });
     });
   }

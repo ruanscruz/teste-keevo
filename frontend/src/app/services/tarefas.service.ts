@@ -15,4 +15,14 @@ export class TarefasService {
   buscar(): Observable<Tarefa[]> {
     return this.httpClient.get<Tarefa[]>(this.API_TAREFAS);
   }
+
+  cadastrar(descricao: string): Observable<Tarefa> {
+    const tarefa = {
+      descricao,
+      dataCriacao: new Date().getTime().toString(),
+      dataConclusao: '',
+      concluida: false
+    }
+    return this.httpClient.post<Tarefa>(`${this.API_TAREFAS}`, tarefa)
+  }
 }

@@ -13,6 +13,8 @@ import { ResumoTarefaComponent } from './views/tarefas/components/resumo-tarefa/
 import { TarefaComponent } from './views/tarefas/components/tarefa/tarefa.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StatusTarefaPipe } from './pipes/status-tarefa.pipe';
 
 @NgModule({
   declarations: [
@@ -24,13 +26,16 @@ import { HttpClientModule } from '@angular/common/http';
     FiltroTarefaComponent,
     ListaTarefaComponent,
     ResumoTarefaComponent,
-    TarefaComponent
+    TarefaComponent,
+    StatusTarefaPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatTooltipModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
