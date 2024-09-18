@@ -1,0 +1,7 @@
+.rodape {
+  @apply bg-roxo-padrao w-full h-8 lg:h-10 flex justify-center items-center text-white text-sm absolute bottom-0;
+}
+
+.rodape svg {
+  @apply fill-white;
+}

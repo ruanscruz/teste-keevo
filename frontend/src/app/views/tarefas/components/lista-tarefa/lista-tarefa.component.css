@@ -1,0 +1,15 @@
+.sem-tarefas_container {
+  @apply flex flex-col items-center justify-center text-cinza-habilitado mt-16;
+}
+
+.sem-tarefas_container svg {
+  @apply fill-roxo-desabilitado w-36 h-36;
+}
+
+.sem-tarefas_titulo {
+  @apply text-2xl;
+}
+
+.sem-tarefas_subtitulo {
+  @apply text-xl;
+}

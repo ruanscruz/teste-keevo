@@ -1,0 +1,48 @@
+.tarefa_container {
+  @apply flex flex-wrap min-h-16 justify-between items-start gap-2 p-4 m-4 border-2 border-cinza-padrao rounded-md bg-gray-200;
+}
+
+.tarefa_container.concluido {
+  @apply bg-white;
+}
+
+.tarefa {
+  @apply flex items-start gap-x-2;
+}
+
+.tarefa_input {
+  @apply w-6 h-6 border-2 border-roxo-padrao rounded-full focus:ring-0
+  text-green-500 checked:bg-green-500 checked:ring-0 checked:hover:bg-green-500;
+}
+
+.tarefa_complementos {
+  @apply flex items-center gap-x-8;
+}
+
+.tarefa_datas {
+  @apply flex flex-col items-center gap-2 text-xs text-cinza-habilitado;
+}
+
+.tarefa_datas div {
+  @apply flex items-center;
+}
+
+.tarefa_datas div svg {
+  @apply fill-cinza-habilitado w-6 h-4;
+}
+
+.tarefa_acoes_container {
+  @apply flex justify-between items-center gap-x-4;
+}
+
+.tarefa_acoes_editar svg {
+  @apply fill-cinza-habilitado w-6 h-6;
+}
+
+.tarefa_acoes_excluir svg {
+  @apply fill-red-500 w-6 h-6;
+}
+
+.tarefa_descricao.concluido {
+  @apply line-through;
+}

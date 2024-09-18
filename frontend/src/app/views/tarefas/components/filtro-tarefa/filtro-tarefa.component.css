@@ -1,0 +1,15 @@
+.filtro_container {
+  @apply m-4;
+}
+
+.filtro_busca {
+  @apply flex items-center justify-center gap-2;
+}
+
+.filtro_busca svg {
+  @apply w-7 h-7 fill-roxo-padrao;
+}
+
+.filtro_busca_campo {
+  @apply w-full border-cinza-padrao rounded-md focus:ring-0 focus:border-roxo-padrao;
+}

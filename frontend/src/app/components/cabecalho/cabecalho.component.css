@@ -1,0 +1,23 @@
+.cabecalho {
+  @apply bg-cinza-padrao w-full h-44 lg:h-52 flex justify-center items-center;
+}
+
+.titulo {
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+}
+
+.titulo span {
+  @apply text-5xl lg:text-6xl font-bold;
+}
+
+.titulo span:first-of-type {
+  @apply text-roxo-padrao;
+}
+
+.titulo span:last-of-type {
+  @apply text-laranja-padrao;
+}
+
+.subtitulo {
+  font-family: "Playwrite CU", cursive;
+}
