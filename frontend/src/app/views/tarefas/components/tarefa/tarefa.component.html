@@ -1,7 +1,7 @@
 <section>
   <div class="tarefa_container" [class.concluido]="tarefa.concluida">
     <div class="tarefa">
-      <input class="tarefa_input" type="checkbox">
+      <input class="tarefa_input" type="checkbox" [checked]="tarefa.concluida">
       <p class="tarefa_descricao" [class.concluido]="tarefa.concluida">{{ tarefa.descricao }}</p>
     </div>
     <div class="tarefa_complementos">

@@ -12,7 +12,7 @@
 
 .tarefa_input {
   @apply w-6 h-6 border-2 border-roxo-padrao rounded-full focus:ring-0
-  text-green-500 checked:bg-green-500 checked:ring-0 checked:hover:bg-green-500;
+  text-green-500 checked:bg-green-500 checked:ring-0 checked:hover:bg-green-500 checked:border-green-500;
 }
 
 .tarefa_complementos {
