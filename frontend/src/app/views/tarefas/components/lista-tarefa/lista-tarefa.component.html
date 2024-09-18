@@ -1,6 +1,8 @@
 <section>
   <app-filtro-tarefa></app-filtro-tarefa>
-  <app-tarefa></app-tarefa>
+  <div *ngIf="listaTarefas.length > 0; else semTarefasCadastradas">
+    <app-tarefa *ngFor="let tarefa of listaTarefas" [tarefa]="tarefa" ></app-tarefa>
+  </div>
 
   <ng-template #semTarefasCadastradas>
     <div class="sem-tarefas_container">

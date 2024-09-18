@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Playwrite+CU:wght@100..400&display=swap');
 
 main {
-  @apply lg:w-3/4 lg:mx-auto;
+  @apply lg:w-3/4 lg:mx-auto min-h-full;
 }
 
 html, body { height: 100%; }

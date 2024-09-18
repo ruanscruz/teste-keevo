@@ -4,18 +4,18 @@ import { TarefasComponent } from './views/tarefas/tarefas.component';
 
 const routes: Routes = [
   {
-    path: 'tarefa/:status',
+    path: 'tarefas/:status',
     component: TarefasComponent
   },
   {
     path: '',
-    redirectTo: 'tarefa/criadas',
+    redirectTo: 'tarefas/criadas',
     pathMatch: 'full'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

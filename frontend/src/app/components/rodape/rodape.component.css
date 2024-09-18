@@ -1,5 +1,5 @@
 .rodape {
-  @apply bg-roxo-padrao w-full h-8 lg:h-10 flex justify-center items-center text-white text-sm absolute bottom-0;
+  @apply bg-roxo-padrao w-full h-8 py-2 flex justify-center items-center text-white text-sm;
 }
 
 .rodape svg {

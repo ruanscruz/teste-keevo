@@ -9,13 +9,22 @@ section {
   @apply flex justify-center items-center gap-x-2 pb-2 border-b-2 cursor-pointer;
 }
 
-.habilitado {
-  @apply border-roxo-padrao border-b-4;
+.ativo {
+  @apply border-b-4;
 }
 
-.desabilitado {
-  @apply border-roxo-desabilitado;
+.ativo_criadas {
+  @apply border-roxo-padrao;
 }
+
+.ativo_andamento {
+  @apply border-laranja-padrao;
+}
+
+.ativo_concluidas {
+  @apply border-verde-padrao;
+}
+
 
 .resumo_status_quantidade {
   @apply font-bold rounded-full px-2;

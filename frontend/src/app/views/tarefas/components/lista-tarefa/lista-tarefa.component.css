@@ -1,5 +1,5 @@
 .sem-tarefas_container {
-  @apply flex flex-col items-center justify-center text-cinza-habilitado mt-16;
+  @apply flex flex-col items-center justify-center text-cinza-habilitado mt-16 h-screen;
 }
 
 .sem-tarefas_container svg {

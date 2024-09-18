@@ -12,6 +12,7 @@ import { ListaTarefaComponent } from './views/tarefas/components/lista-tarefa/li
 import { ResumoTarefaComponent } from './views/tarefas/components/resumo-tarefa/resumo-tarefa.component';
 import { TarefaComponent } from './views/tarefas/components/tarefa/tarefa.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTooltipModule
+    MatTooltipModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

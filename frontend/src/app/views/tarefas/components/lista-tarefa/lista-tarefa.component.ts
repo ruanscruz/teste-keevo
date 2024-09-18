@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lista-tarefa',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./lista-tarefa.component.css']
 })
 export class ListaTarefaComponent {
-
+  @Input() listaTarefas: any[] = [];
 }
