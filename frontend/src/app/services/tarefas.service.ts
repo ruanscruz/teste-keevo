@@ -10,20 +10,12 @@ import { Observable, Subject } from 'rxjs';
 export class TarefasService {
   private readonly API_TAREFAS = `${environment.api}/tarefas`;
   private edicaoSource = new Subject<Tarefa>();
-  private conclusaoSource = new Subject<Tarefa>();
-
-  constructor(private httpClient: HttpClient) {
-  }
-
   edicao$ = this.edicaoSource.asObservable();
-  conclusao$ = this.conclusaoSource.asObservable();
+
+  constructor(private httpClient: HttpClient) {}
 
   editar(tarefa: Tarefa) {
     this.edicaoSource.next(tarefa);
-  }
-
-  concluir(tarefa: Tarefa) {
-    this.conclusaoSource.next(tarefa);
   }
 
   buscar(): Observable<Tarefa[]> {
@@ -41,6 +33,6 @@ export class TarefasService {
   }
 
   atualizar(tarefa: Tarefa): Observable<Tarefa> {
-    return this.httpClient.put<Tarefa>(`${this.API_TAREFAS}/${tarefa.id}`, tarefa)
+    return this.httpClient.put<Tarefa>(`${this.API_TAREFAS}s/${tarefa.id}`, tarefa)
   }
 }

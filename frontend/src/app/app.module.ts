@@ -15,6 +15,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StatusTarefaPipe } from './pipes/status-tarefa.pipe';
+import { ModalNotificacaoComponent } from './components/modal-notificacao/modal-notificacao.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { ModalConfirmacaoComponent } from './components/modal-confirmacao/modal-confirmacao.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +33,9 @@ import { StatusTarefaPipe } from './pipes/status-tarefa.pipe';
     ListaTarefaComponent,
     ResumoTarefaComponent,
     TarefaComponent,
-    StatusTarefaPipe
+    StatusTarefaPipe,
+    ModalNotificacaoComponent,
+    ModalConfirmacaoComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +44,10 @@ import { StatusTarefaPipe } from './pipes/status-tarefa.pipe';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDialogModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
