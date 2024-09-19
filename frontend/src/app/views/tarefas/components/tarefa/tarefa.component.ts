@@ -3,8 +3,7 @@ import { Component, Input } from '@angular/core';
 import { Tarefa } from 'src/app/interfaces/tarefa';
 import { TarefasService } from 'src/app/services/tarefas.service';
 import { EMPTY, catchError } from 'rxjs';
-import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { ModalNotificacaoComponent } from 'src/app/components/modal-notificacao/modal-notificacao.component';
+import { FuncoesHelpers } from 'src/app/helpers/funcoes';
 
 @Component({
   selector: 'app-tarefa',
@@ -17,18 +16,33 @@ export class TarefaComponent {
   constructor(
     private service: TarefasService,
     private router: Router,
-    private dialog: MatDialog
+    private helper: FuncoesHelpers
   ) { }
 
-  editar(): void {
+  editarTarefa(): void {
     this.service.editar(this.tarefa);
   }
 
+  excluirtarefa(): void {
+    this.helper
+      .confirmarAcao("Excluir", "Deseja realmente excluir a tarefa?")
+      .afterClosed().subscribe(result => {
+        if (result) this.excluir();
+      });
+  }
+
   excluir(): void {
-    // this.dialog.open(ConfirmacaoConclusaoComponent, {
-    //   console.log('Tarefa concluída');
-    // });
-    // this.openDialog();
+    this.service
+      .excluir(this.tarefa)
+      .pipe(
+        catchError(() => {
+          this.helper.notificar("Erro", "Não foi possivel excluir a tarefa");
+          return EMPTY;
+        })
+      )
+      .subscribe(() => {
+        this.router.navigate(['/tarefas/criadas']);
+      });
   }
 
   alterarStatus(): void {
@@ -38,9 +52,7 @@ export class TarefaComponent {
       .atualizar(this.tarefa)
       .pipe(
         catchError(() => {
-          this.dialog.open(ModalNotificacaoComponent, {
-            data: { titulo:"Erro", mensagem: 'Não foi possivel concluir a tarefa' }
-          });
+          this.helper.notificar("Erro", "Não foi possivel alterar o status da tarefa");
           this.tarefa.concluida = !this.tarefa.concluida;
           this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
           return EMPTY;
@@ -51,14 +63,4 @@ export class TarefaComponent {
         this.router.navigate(['/tarefas', rota]);
       })
   }
-
-  // openDialog(): void {
-  //   let dialogRef = this.dialog.open(ModalNotificacaoComponent, {
-  //     data: { titulo:"Atenção", mensagem: 'Deseja realmente excluir a tarefa?' }
-  //   });
-
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log(result);
-  //   });
-  // }
 }
