@@ -11,7 +11,7 @@
             <path
               d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
           </svg>
-          <span>{{  tarefa.dataCriacao | date:'dd/MM/YYYY HH:mm:ss' }}</span>
+          <span>{{ tarefa.dataCriacao | date:'dd/MM/YYYY HH:mm:ss' }}</span>
         </div>
         <div *ngIf="tarefa.concluida" matTooltip="Data/Hora conclusão" matTooltipPosition="left">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="tarefa_acoes_container">
-        <button *ngIf="!tarefa.concluida" class="tarefa_acoes_editar" matTooltip="Editar tarefa">
+        <button *ngIf="!tarefa.concluida" class="tarefa_acoes_editar" matTooltip="Editar tarefa" (click)="editar()">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
             <path
               d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h357l-80 80H200v560h560v-278l80-80v358q0 33-23.5 56.5T760-120H200Zm280-360ZM360-360v-170l367-367q12-12 27-18t30-6q16 0 30.5 6t26.5 18l56 57q11 12 17 26.5t6 29.5q0 15-5.5 29.5T897-728L530-360H360Zm481-424-56-56 56 56ZM440-440h56l232-232-28-28-29-28-231 231v57Zm260-260-29-28 29 28 28 28-28-28Z" />

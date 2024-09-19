@@ -35,7 +35,7 @@ import { StatusTarefaPipe } from './pipes/status-tarefa.pipe';
     MatTooltipModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
