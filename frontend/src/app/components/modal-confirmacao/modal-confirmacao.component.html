@@ -3,6 +3,8 @@
   {{ data.mensagem }}
 </mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button mat-dialog-close>Cancelar</button>
-  <button class="btnConfirmar" mat-button [mat-dialog-close]="data.confirmar" cdkFocusInitial>Confirmar</button>
+  <div class="botoes_container">
+    <button mat-button mat-dialog-close>Cancelar</button>
+    <button class="btnConfirmar" mat-button [mat-dialog-close]="data.confirmar" cdkFocusInitial>Confirmar</button>
+  </div>
 </mat-dialog-actions>

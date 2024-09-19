@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { FuncoesHelpers } from 'src/app/helpers/funcoes';
 import { Tarefa } from 'src/app/interfaces/tarefa';
 import { TarefasService } from 'src/app/services/tarefas.service';
 
@@ -10,24 +11,25 @@ import { TarefasService } from 'src/app/services/tarefas.service';
   templateUrl: './cadastro-tarefa.component.html',
   styleUrls: ['./cadastro-tarefa.component.css']
 })
-export class CadastroTarefaComponent {
+export class CadastroTarefaComponent implements OnInit {
   formulario!: FormGroup;
-  tarefaEdicaoSubscribe!: Subscription;
+  subscription!: Subscription
   tarefaEdicao!: Tarefa;
   edicao: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder,
     private service: TarefasService,
-    private router: Router
+    private router: Router,
+    private helper: FuncoesHelpers
   ) {
-    this.tarefaEdicaoSubscribe = this.service.edicao$.subscribe((tarefa: Tarefa) => {
-      this.formulario.setValue({
-        descricao: tarefa.descricao
-      })
-      this.tarefaEdicao = tarefa
-      this.edicao = true
-      document.getElementById('descricao')?.focus()
+    this.subscription = this.service.edicao$.subscribe({
+      next: (tarefa: Tarefa) => {
+        this.formulario.setValue({ descricao: tarefa.descricao })
+        this.tarefaEdicao = tarefa
+        this.edicao = true
+        document.getElementById('descricao')?.focus()
+      }
     })
   }
 
@@ -50,16 +52,24 @@ export class CadastroTarefaComponent {
   }
 
   cadastrarTarefa(): void {
-    this.service.cadastrar(this.formulario.value.descricao).subscribe(() => {
-      this.router.navigate(['/tarefas/criadas'])
+    this.service.cadastrar(this.formulario.value.descricao).subscribe({
+      next: () => this.router.navigate(['/tarefas/criadas']),
+      error: () => this.helper.notificar("Erro", "Não foi possivel cadastrar a tarefa")
     })
   }
 
   editartarefa(): void {
-    this.tarefaEdicao.descricao = this.formulario.value.descricao
-    this.service.atualizar(this.tarefaEdicao).subscribe(() => {
-      this.router.navigate(['/tarefas/andamento'])
-      this.edicao = false
+    const tarefa = { ...this.tarefaEdicao }
+    tarefa.descricao = this.formulario.value.descricao
+    this.service.atualizar(tarefa).subscribe({
+      next: () => {
+        this.router.navigate(['/tarefas/criadas'])
+        this.edicao = false
+      },
+      error: () => {
+        this.edicao = false
+        this.helper.notificar("Erro", "Não foi possivel editar a tarefa")
+      }
     })
   }
 

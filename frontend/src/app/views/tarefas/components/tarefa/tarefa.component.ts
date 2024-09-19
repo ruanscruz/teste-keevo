@@ -2,7 +2,6 @@ import { Router } from '@angular/router';
 import { Component, Input } from '@angular/core';
 import { Tarefa } from 'src/app/interfaces/tarefa';
 import { TarefasService } from 'src/app/services/tarefas.service';
-import { EMPTY, catchError } from 'rxjs';
 import { FuncoesHelpers } from 'src/app/helpers/funcoes';
 
 @Component({
@@ -28,39 +27,29 @@ export class TarefaComponent {
       .confirmarAcao("Excluir", "Deseja realmente excluir a tarefa?")
       .afterClosed().subscribe(result => {
         if (result) this.excluir();
-      });
+      })
   }
 
   excluir(): void {
-    this.service
-      .excluir(this.tarefa)
-      .pipe(
-        catchError(() => {
-          this.helper.notificar("Erro", "Não foi possivel excluir a tarefa");
-          return EMPTY;
-        })
-      )
-      .subscribe(() => {
-        this.router.navigate(['/tarefas/criadas']);
-      });
+    this.service.excluir(this.tarefa).subscribe({
+      next: () => this.router.navigate(['/tarefas/criadas']),
+      error: () => this.helper.notificar("Erro", "Não foi possivel excluir a tarefa")
+    })
   }
 
   alterarStatus(): void {
     this.tarefa.concluida = !this.tarefa.concluida;
     this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
-    this.service
-      .atualizar(this.tarefa)
-      .pipe(
-        catchError(() => {
-          this.helper.notificar("Erro", "Não foi possivel alterar o status da tarefa");
-          this.tarefa.concluida = !this.tarefa.concluida;
-          this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
-          return EMPTY;
-        })
-      )
-      .subscribe(tarefa => {
+    this.service.atualizar(this.tarefa).subscribe({
+      next: tarefa => {
         const rota: string = tarefa.concluida ? 'concluidas' : 'andamento';
         this.router.navigate(['/tarefas', rota]);
-      })
+      },
+      error: () => {
+        this.helper.notificar("Erro", "Não foi possivel alterar o status da tarefa");
+        this.tarefa.concluida = !this.tarefa.concluida;
+        this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
+      }
+    })
   }
 }

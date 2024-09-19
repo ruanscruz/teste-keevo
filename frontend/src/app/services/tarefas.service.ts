@@ -33,10 +33,10 @@ export class TarefasService {
   }
 
   atualizar(tarefa: Tarefa): Observable<Tarefa> {
-    return this.httpClient.put<Tarefa>(`${this.API_TAREFAS}s${tarefa.id}`, tarefa)
+    return this.httpClient.put<Tarefa>(`${this.API_TAREFAS}/${tarefa.id}`, tarefa)
   }
 
   excluir(tarefa: Tarefa): Observable<any> {
-    return this.httpClient.delete(`${this.API_TAREFAS}/s${tarefa.id}`)
+    return this.httpClient.delete(`${this.API_TAREFAS}/${tarefa.id}`)
   }
 }

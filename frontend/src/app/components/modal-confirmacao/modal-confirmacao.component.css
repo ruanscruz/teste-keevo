@@ -1,3 +1,7 @@
+.botoes_container {
+  @apply absolute right-4 !important;
+}
+
 .btnConfirmar {
   @apply bg-red-500 text-white !important;
 }
