@@ -2,6 +2,10 @@
   @apply flex flex-col items-center justify-center text-cinza-habilitado py-12;
 }
 
+.sem-tarefas_container div {
+  @apply flex flex-col items-center justify-center;
+}
+
 .sem-tarefas_container svg {
   @apply w-36 h-36;
 }

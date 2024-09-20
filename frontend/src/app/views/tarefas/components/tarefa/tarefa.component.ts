@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, Input } from '@angular/core';
 import { Tarefa } from 'src/app/interfaces/tarefa';
 import { TarefasService } from 'src/app/services/tarefas.service';
@@ -15,6 +15,7 @@ export class TarefaComponent {
   constructor(
     private service: TarefasService,
     private router: Router,
+    private route: ActivatedRoute,
     private helper: FuncoesHelpers
   ) { }
 
@@ -32,7 +33,7 @@ export class TarefaComponent {
 
   excluir(): void {
     this.service.excluir(this.tarefa).subscribe({
-      next: () => this.router.navigate(['/tarefas/criadas']),
+      next: () => this.atualizarDadosTarefas(),
       error: () => this.helper.notificar("Erro", "Não foi possivel excluir a tarefa")
     })
   }
@@ -41,15 +42,16 @@ export class TarefaComponent {
     this.tarefa.concluida = !this.tarefa.concluida;
     this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
     this.service.atualizar(this.tarefa).subscribe({
-      next: tarefa => {
-        const rota: string = tarefa.concluida ? 'concluidas' : 'andamento';
-        this.router.navigate(['/tarefas', rota]);
-      },
+      next: () => this.atualizarDadosTarefas(),
       error: () => {
         this.helper.notificar("Erro", "Não foi possivel alterar o status da tarefa");
         this.tarefa.concluida = !this.tarefa.concluida;
         this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
       }
     })
+  }
+
+  atualizarDadosTarefas() {
+    this.router.navigate(['/tarefas', this.route.snapshot.url[1].path])
   }
 }

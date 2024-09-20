@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Tarefa } from '../interfaces/tarefa';
 import { Observable, Subject } from 'rxjs';
@@ -12,7 +12,7 @@ export class TarefasService {
   private edicaoSource = new Subject<Tarefa>();
   edicao$ = this.edicaoSource.asObservable();
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
   editar(tarefa: Tarefa) {
     this.edicaoSource.next(tarefa);
@@ -38,5 +38,16 @@ export class TarefasService {
 
   excluir(tarefa: Tarefa): Observable<any> {
     return this.httpClient.delete(`${this.API_TAREFAS}/${tarefa.id}`)
+  }
+
+  filtrar(status: string): Observable<Tarefa[]> {
+    let params = new HttpParams();
+    if (status === 'andamento') {
+      params = params.append('concluida', 'false');
+    } else if (status === 'concluidas') {
+      params = params.append('concluida', 'true');
+    }
+
+    return this.httpClient.get<Tarefa[]>(this.API_TAREFAS, { params });
   }
 }

@@ -1,5 +1,6 @@
 export interface ResumoTarefa {
-    criadas: number;
-    andamento: number;
-    concluidas: number;
+  [key: string]: number;
+  criadas: number;
+  andamento: number;
+  concluidas: number;
 }

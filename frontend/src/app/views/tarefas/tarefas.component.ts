@@ -15,6 +15,7 @@ export class TarefasComponent implements OnInit {
   statusTarefas!: string;
   listaTarefas!: Tarefa[];
   resumoQuantidadeTarefas!: ResumoTarefa;
+  filtroAtivo: boolean = false;
 
   constructor(
     private service: TarefasService,
@@ -33,26 +34,42 @@ export class TarefasComponent implements OnInit {
     this.service.buscar().subscribe({
       next: tarefas => {
         this.handleValoresIniciais();
-        Object.values(tarefas).forEach(tarefa => {
-          const { concluida } = tarefa;
-          this.resumoQuantidadeTarefas['criadas']++;
-          concluida
-            ? this.resumoQuantidadeTarefas['concluidas']++
-            : this.resumoQuantidadeTarefas['andamento']++;
-
-          const tarefaStatusMap: { [key: string]: boolean } = {
-            'criadas': true,
-            'andamento': !concluida,
-            'concluidas': concluida
-          };
-
-          if (tarefaStatusMap[status]) {
-            this.listaTarefas.push(tarefa);
-          }
-          this.listaTarefas.sort((a, b) => a.dataCriacao > b.dataCriacao ? -1 : 1)
-        });
+        this.handleTarefas(tarefas, status);
       },
       error: () => this.helper.notificar("Erro", "Não foi possivel buscar as tarefas")
+    });
+  }
+
+  listarTarefas(valor: string): void {
+    if (this.resumoQuantidadeTarefas[this.statusTarefas] === 0) return;
+
+    this.filtroAtivo = valor !== '';
+    this.service.filtrar(this.statusTarefas).subscribe({
+      next: tarefas => {
+        this.listaTarefas = tarefas.filter(tarefa => tarefa.descricao.toLowerCase().includes(valor.toLowerCase()))
+      },
+      error: () => this.helper.notificar("Erro", "Não foi possivel buscar as tarefas")
+    })
+  }
+
+  handleTarefas(tarefas: Tarefa[], status: string): void {
+    Object.values(tarefas).forEach(tarefa => {
+      const { concluida } = tarefa;
+      this.resumoQuantidadeTarefas['criadas']++;
+      concluida
+        ? this.resumoQuantidadeTarefas['concluidas']++
+        : this.resumoQuantidadeTarefas['andamento']++;
+
+      const tarefaStatusMap: { [key: string]: boolean } = {
+        'criadas': true,
+        'andamento': !concluida,
+        'concluidas': concluida
+      };
+
+      if (tarefaStatusMap[status]) {
+        this.listaTarefas.push(tarefa);
+      }
+      this.listaTarefas.sort((a, b) => a.dataCriacao > b.dataCriacao ? -1 : 1)
     });
   }
 
@@ -60,6 +77,15 @@ export class TarefasComponent implements OnInit {
     const status = this.route.snapshot.paramMap.get('status')?.toString();
     this.statusTarefas = status || 'criadas';
     this.buscarTarefas(this.statusTarefas);
+  }
+
+  handleValoresIniciais(): void {
+    this.resumoQuantidadeTarefas = {
+      criadas: 0,
+      andamento: 0,
+      concluidas: 0
+    };
+    this.listaTarefas = [];
   }
 
   handleStatusAlterado(): void {
@@ -73,14 +99,5 @@ export class TarefasComponent implements OnInit {
         this.statusTarefas = status || this.statusTarefas
         this.buscarTarefas(this.statusTarefas);
       });
-  }
-
-  handleValoresIniciais(): void {
-    this.resumoQuantidadeTarefas = {
-      criadas: 0,
-      andamento: 0,
-      concluidas: 0
-    };
-    this.listaTarefas = [];
   }
 }

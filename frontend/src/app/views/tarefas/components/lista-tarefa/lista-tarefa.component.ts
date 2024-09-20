@@ -9,4 +9,5 @@ import { Tarefa } from 'src/app/interfaces/tarefa';
 export class ListaTarefaComponent {
   @Input() listaTarefas!: Tarefa[];
   @Input() statusTarefas!: string;
+  @Input() filtroAtivo!: boolean;
 }
