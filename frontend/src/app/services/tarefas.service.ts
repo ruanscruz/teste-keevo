@@ -1,14 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Tarefa } from '../interfaces/tarefa';
 import { Observable, Subject } from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class TarefasService {
-  private readonly API_TAREFAS = `${environment.api}/tarefas`;
+  private readonly API_TAREFAS = `${environment.api}/tarefa`;
   private edicaoSource = new Subject<Tarefa>();
   edicao$ = this.edicaoSource.asObservable();
 
@@ -19,7 +21,12 @@ export class TarefasService {
   }
 
   buscar(): Observable<Tarefa[]> {
-    return this.httpClient.get<Tarefa[]>(this.API_TAREFAS);
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/json')
+      .set('Accept', 'application/json')
+      .set('Access-Control-Allow-Origin', '*')
+      .set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    return this.httpClient.get<Tarefa[]>(this.API_TAREFAS, { headers });
   }
 
   cadastrar(descricao: string): Observable<Tarefa> {

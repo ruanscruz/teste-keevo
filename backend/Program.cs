@@ -5,6 +5,18 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<TarefaContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("TarefaConnection")));
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddCors(options => options.AddPolicy(MyAllowSpecificOrigins,
+    policy => policy
+        .WithOrigins("http://localhost:4200")
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+    )
+);
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -26,5 +38,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(MyAllowSpecificOrigins);
+
 
 app.Run();

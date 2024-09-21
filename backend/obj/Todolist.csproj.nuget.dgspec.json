@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ruan Cruz\\Documents\\projetos\\dotnet\\todolist\\Todolist\\Todolist.csproj": {}
+    "/var/projetos/teste-keevo/backend/Todolist.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ruan Cruz\\Documents\\projetos\\dotnet\\todolist\\Todolist\\Todolist.csproj": {
+    "/var/projetos/teste-keevo/backend/Todolist.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ruan Cruz\\Documents\\projetos\\dotnet\\todolist\\Todolist\\Todolist.csproj",
+        "projectUniqueName": "/var/projetos/teste-keevo/backend/Todolist.csproj",
         "projectName": "Todolist",
-        "projectPath": "C:\\Users\\Ruan Cruz\\Documents\\projetos\\dotnet\\todolist\\Todolist\\Todolist.csproj",
-        "packagesPath": "C:\\Users\\Ruan Cruz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ruan Cruz\\Documents\\projetos\\dotnet\\todolist\\Todolist\\obj\\",
+        "projectPath": "/var/projetos/teste-keevo/backend/Todolist.csproj",
+        "packagesPath": "/root/.nuget/packages/",
+        "outputPath": "/var/projetos/teste-keevo/backend/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Ruan Cruz\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/root/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,17 +32,16 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.33, )"
@@ -87,7 +80,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.419/RuntimeIdentifierGraph.json"
         }
       }
     }

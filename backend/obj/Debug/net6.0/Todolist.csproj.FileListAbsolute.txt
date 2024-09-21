@@ -1,42 +1,124 @@
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\appsettings.Development.json
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\appsettings.json
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Todolist.exe
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Todolist.deps.json
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Todolist.runtimeconfig.json
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Todolist.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Todolist.pdb
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Microsoft.OpenApi.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.csproj.AssemblyReference.cache
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.AssemblyInfoInputs.cache
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.AssemblyInfo.cs
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.csproj.CoreCompileInputs.cache
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\staticwebassets.build.json
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\staticwebassets\msbuild.Todolist.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\staticwebassets\msbuild.build.Todolist.props
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Todolist.props
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Todolist.props
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\staticwebassets.pack.json
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\scopedcss\bundle\Todolist.styles.css
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.csproj.Up2Date
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\refint\Todolist.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.pdb
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\Todolist.genruntimeconfig.cache
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\obj\Debug\net6.0\ref\Todolist.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Humanizer.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Npgsql.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-C:\Users\Ruan Cruz\Documents\projetos\dotnet\Todolist\Todolist\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/appsettings.Development.json
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/appsettings.json
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Todolist.exe
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Todolist.deps.json
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Todolist.runtimeconfig.json
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Todolist.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Todolist.pdb
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Microsoft.OpenApi.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.csproj.AssemblyReference.cache
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.AssemblyInfoInputs.cache
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.AssemblyInfo.cs
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.csproj.CoreCompileInputs.cache
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.MvcApplicationPartsAssemblyInfo.cs
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/staticwebassets.build.json
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/staticwebassets.development.json
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/staticwebassets/msbuild.Todolist.Microsoft.AspNetCore.StaticWebAssets.props
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/staticwebassets/msbuild.build.Todolist.props
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.Todolist.props
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.Todolist.props
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/staticwebassets.pack.json
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/scopedcss/bundle/Todolist.styles.css
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.csproj.Up2Date
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/refint/Todolist.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.pdb
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/Todolist.genruntimeconfig.cache
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/obj/Debug/net6.0/ref/Todolist.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Humanizer.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Npgsql.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/appsettings.Development.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/appsettings.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.exe
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.deps.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.runtimeconfig.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.pdb
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Humanizer.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.OpenApi.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Npgsql.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.csproj.AssemblyReference.cache
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.GeneratedMSBuildEditorConfig.editorconfig
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.AssemblyInfoInputs.cache
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.AssemblyInfo.cs
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.csproj.CoreCompileInputs.cache
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.MvcApplicationPartsAssemblyInfo.cs
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.MvcApplicationPartsAssemblyInfo.cache
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.sourcelink.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets.build.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets.development.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets/msbuild.Todolist.Microsoft.AspNetCore.StaticWebAssets.props
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets/msbuild.build.Todolist.props
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.Todolist.props
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.Todolist.props
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets.pack.json
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/scopedcss/bundle/Todolist.styles.css
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.csproj.Up2Date
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/refint/Todolist.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.pdb
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.genruntimeconfig.cache
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/ref/Todolist.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/AutoMapper.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/appsettings.Development.json
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/appsettings.json
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.deps.json
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.runtimeconfig.json
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.pdb
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/AutoMapper.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Humanizer.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.OpenApi.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Npgsql.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/System.Diagnostics.DiagnosticSource.dll
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.csproj.AssemblyReference.cache
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.GeneratedMSBuildEditorConfig.editorconfig
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.AssemblyInfoInputs.cache
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.AssemblyInfo.cs
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.csproj.CoreCompileInputs.cache
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.MvcApplicationPartsAssemblyInfo.cs
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.MvcApplicationPartsAssemblyInfo.cache
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets.build.json
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/staticwebassets.development.json
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/scopedcss/bundle/Todolist.styles.css
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.csproj.CopyComplete
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.dll
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/refint/Todolist.dll
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.pdb
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.genruntimeconfig.cache
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/ref/Todolist.dll
