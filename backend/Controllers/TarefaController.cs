@@ -18,12 +18,24 @@ public class TarefaController : Controller
         _mapper = mapper;
     }
 
+    /// <summary>
+    /// Listar as tarefas cadastradas
+    /// </summary>
+    /// <returns>IEnumerable<ReadTarefaDto></returns>
+    /// <response code="200">Retorna uma lista de tarefas</response>
     [HttpGet]
     public IEnumerable<ReadTarefaDto> ListarTarefas([FromQuery] int skip = 0, [FromQuery] int limit = 2)
     {
         return _mapper.Map<List<ReadTarefaDto>>(_context.Tarefas.Skip(skip).Take(limit));
     }
 
+    /// <summary>
+    /// Buscar uma tarefa
+    /// </summary>
+    /// <param name="id">Id da tarefa a ser consultada</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="200">Caso a tarefa seja encontrada com sucesso</response>
+    /// <response code="404">Caso a tarefa não seja encontrada</response>
     [HttpGet("{id}")]
     public IActionResult ObterTarefa(int id)
     {
@@ -33,7 +45,14 @@ public class TarefaController : Controller
         return Ok(tarefaDto);
     }
 
+    /// <summary>
+    /// Adiciona uma tarefa
+    /// </summary>
+    /// <param name="tarefaDto">Objeto com os campos necessários para criação de um tarefa</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status201Created)]
     public IActionResult AdicionarTarefa([FromBody] CreateTarefaDto tarefaDto)
     {   
         Tarefa tarefa = _mapper.Map<Tarefa>(tarefaDto);
@@ -42,6 +61,14 @@ public class TarefaController : Controller
         return CreatedAtAction(nameof(ObterTarefa), new { id = tarefa.Id }, tarefa);
     }
 
+    /// <summary>
+    /// Atualiza uma tarefa
+    /// </summary>
+    /// <param name="id">Id da tarefa a ser alterada</param>
+    /// <param name="tarefaDto">Objeto com os campos necessários para alteração de um tarefa</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="204">Caso alteração seja feita com sucesso</response>
+    /// <response code="404">Caso a tarefa não seja encontrada</response>
     [HttpPut("{id}")]
     public IActionResult AtualizarTarefa(int id, [FromBody] UpdateTarefaDto tarefaDto)
     {
@@ -52,6 +79,13 @@ public class TarefaController : Controller
         return NoContent();
     }
 
+    /// <summary>
+    /// Deleta uma tarefa
+    /// </summary>
+    /// <param name="id">Id da tarefa a ser deletada</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="204">Caso alteração seja feita com sucesso</response>
+    /// <response code="404">Caso a tarefa não seja encontrada</response>
     [HttpDelete("{id}")]
     public IActionResult DeletarTarefa(int id)
     {

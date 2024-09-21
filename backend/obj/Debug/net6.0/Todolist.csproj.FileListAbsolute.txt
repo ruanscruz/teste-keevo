@@ -84,6 +84,8 @@ C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/
 //wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.genruntimeconfig.cache
 //wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/ref/Todolist.dll
 //wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/AutoMapper.dll
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.xml
+//wsl.localhost/Ubuntu-20.04/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.xml
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/appsettings.Development.json
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/appsettings.json
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist
@@ -91,6 +93,7 @@ C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.runtimeconfig.json
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.dll
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.pdb
+/var/projetos/teste-keevo/backend/bin/Debug/net6.0/Todolist.xml
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/AutoMapper.dll
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/Humanizer.dll
 /var/projetos/teste-keevo/backend/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
@@ -119,6 +122,7 @@ C:/Users/Ruan Cruz/Documents/projetos/dotnet/Todolist/Todolist/bin/Debug/net6.0/
 /var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.csproj.CopyComplete
 /var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.dll
 /var/projetos/teste-keevo/backend/obj/Debug/net6.0/refint/Todolist.dll
+/var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.xml
 /var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.pdb
 /var/projetos/teste-keevo/backend/obj/Debug/net6.0/Todolist.genruntimeconfig.cache
 /var/projetos/teste-keevo/backend/obj/Debug/net6.0/ref/Todolist.dll
