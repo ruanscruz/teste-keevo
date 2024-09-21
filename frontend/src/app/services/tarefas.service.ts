@@ -21,12 +21,7 @@ export class TarefasService {
   }
 
   buscar(): Observable<Tarefa[]> {
-    const headers = new HttpHeaders()
-      .set('Content-Type', 'application/json')
-      .set('Accept', 'application/json')
-      .set('Access-Control-Allow-Origin', '*')
-      .set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    return this.httpClient.get<Tarefa[]>(this.API_TAREFAS, { headers });
+    return this.httpClient.get<Tarefa[]>(this.API_TAREFAS);
   }
 
   cadastrar(descricao: string): Observable<Tarefa> {
