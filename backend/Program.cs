@@ -13,7 +13,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 builder.Services.AddCors(options => options.AddPolicy(MyAllowSpecificOrigins,
     policy => policy
-        .WithOrigins("http://localhost:4200", "http://127.0.0.1:4200")
+        .AllowAnyOrigin()
         .AllowAnyHeader()
         .AllowAnyMethod()
     )

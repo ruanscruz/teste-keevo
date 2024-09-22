@@ -24,7 +24,7 @@ public class TarefaController : Controller
     /// <returns>IEnumerable<ReadTarefaDto></returns>
     /// <response code="200">Retorna uma lista de tarefas</response>
     [HttpGet]
-    public IEnumerable<ReadTarefaDto> ListarTarefas([FromQuery] int skip = 0, [FromQuery] int limit = 2)
+    public IEnumerable<ReadTarefaDto> ListarTarefas([FromQuery] int skip = 0, [FromQuery] int limit = 100)
     {
         return _mapper.Map<List<ReadTarefaDto>>(_context.Tarefas.Skip(skip).Take(limit));
     }

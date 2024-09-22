@@ -1,0 +1,51 @@
+version: '3.4'
+services:
+  todolist-client:
+    image: todolist-client
+    container_name: todolist-client
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    networks:
+      - mynetwork-externa
+    ports:
+      - 8081:80
+    depends_on:
+      - todolist-api
+
+  todolist-api:
+    image: todolist-api
+    container_name: todolist-api
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    networks:
+      - mynetwork-interna
+      - mynetwork-externa
+    ports:
+      - 5139:5139
+    depends_on:
+      - todolist-db    
+  
+  todolist-db:
+    image: postgres:15.3-alpine
+    container_name: todolist-db
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    networks:
+      - mynetwork-interna
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgres:/var/lib/postgresql/data
+
+networks:
+  mynetwork-externa:
+    driver: bridge
+  mynetwork-interna:
+    driver: bridge
+    
