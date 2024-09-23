@@ -1,3 +1,4 @@
+import { STATUS_CONCLUIDA } from './../../constants/status-tarefa';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { distinctUntilChanged, filter } from 'rxjs';
@@ -16,6 +17,7 @@ export class TarefasComponent implements OnInit {
   listaTarefas!: Tarefa[];
   resumoQuantidadeTarefas!: ResumoTarefa;
   filtroAtivo: boolean = false;
+  haMaisTarefas: boolean = true;
 
   constructor(
     private service: TarefasService,
@@ -30,8 +32,8 @@ export class TarefasComponent implements OnInit {
     this.handleValoresIniciais();
   }
 
-  buscarTarefas(status: string = 'criadas'): void {
-    this.service.buscar().subscribe({
+  buscarTarefas(status: string = ''): void {
+    this.service.buscar('criadas').subscribe({
       next: tarefas => {
         this.handleValoresIniciais();
         this.handleTarefas(tarefas, status);
@@ -54,16 +56,17 @@ export class TarefasComponent implements OnInit {
 
   handleTarefas(tarefas: Tarefa[], status: string): void {
     Object.values(tarefas).forEach(tarefa => {
-      const { concluida } = tarefa;
+      const tarefaConcluida = tarefa.status === STATUS_CONCLUIDA;
       this.resumoQuantidadeTarefas['criadas']++;
-      concluida
-        ? this.resumoQuantidadeTarefas['concluidas']++
+
+      tarefaConcluida
+        ? this.resumoQuantidadeTarefas['concluida']++
         : this.resumoQuantidadeTarefas['andamento']++;
 
       const tarefaStatusMap: { [key: string]: boolean } = {
         'criadas': true,
-        'andamento': !concluida,
-        'concluidas': concluida
+        'andamento': !tarefaConcluida,
+        'concluida': tarefaConcluida
       };
 
       if (tarefaStatusMap[status]) {
@@ -83,7 +86,7 @@ export class TarefasComponent implements OnInit {
     this.resumoQuantidadeTarefas = {
       criadas: 0,
       andamento: 0,
-      concluidas: 0
+      concluida: 0
     };
     this.listaTarefas = [];
   }

@@ -25,6 +25,10 @@ section {
   @apply border-verde-padrao;
 }
 
+.resumo_status_descricao {
+  @apply font-medium;
+}
+
 
 .resumo_status_quantidade {
   @apply font-bold rounded-full px-2;

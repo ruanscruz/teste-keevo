@@ -21,12 +21,15 @@ public class TarefaController : Controller
     /// <summary>
     /// Listar as tarefas cadastradas
     /// </summary>
+    /// <param name="status">Filtro para listar tarefas por status</param>
     /// <returns>IEnumerable<ReadTarefaDto></returns>
     /// <response code="200">Retorna uma lista de tarefas</response>
     [HttpGet]
-    public IEnumerable<ReadTarefaDto> ListarTarefas([FromQuery] int skip = 0, [FromQuery] int limit = 100)
-    {
-        return _mapper.Map<List<ReadTarefaDto>>(_context.Tarefas.Skip(skip).Take(limit));
+    public IEnumerable<ReadTarefaDto> ListarTarefas([FromQuery] string ?status = "")
+    {   
+        if(status == "")return _mapper.Map<List<ReadTarefaDto>>(_context.Tarefas);
+
+        return _mapper.Map<List<ReadTarefaDto>>(_context.Tarefas.Where(tarefa => tarefa.Status == status));  
     }
 
     /// <summary>

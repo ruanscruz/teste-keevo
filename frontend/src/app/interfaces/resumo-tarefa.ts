@@ -2,5 +2,5 @@ export interface ResumoTarefa {
   [key: string]: number;
   criadas: number;
   andamento: number;
-  concluidas: number;
+  concluida: number;
 }

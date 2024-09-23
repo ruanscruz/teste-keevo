@@ -10,4 +10,5 @@ export class ListaTarefaComponent {
   @Input() listaTarefas!: Tarefa[];
   @Input() statusTarefas!: string;
   @Input() filtroAtivo!: boolean;
+  @Input() haMaisTarefas!: boolean;
 }

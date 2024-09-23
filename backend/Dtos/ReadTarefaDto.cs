@@ -6,7 +6,7 @@ public class ReadTarefaDto
 {   
     public int Id { get; set; }
     public string? Descricao { get; set; }
+    public string? Status { get; set; }
     public string? DataCriacao { get; set; }
     public string? DataConclusao { get; set; }
-    public bool Concluida { get; set; }
 }

@@ -26,7 +26,11 @@
   @apply fill-laranja-desabilitado
 }
 
-.concluidas {
+.concluida {
   @apply fill-verde-desabilitado;
+}
+
+.carregar-mais__container {
+  @apply flex justify-center items-center;
 }
 

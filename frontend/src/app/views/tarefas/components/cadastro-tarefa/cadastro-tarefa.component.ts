@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { FuncoesHelpers } from 'src/app/helpers/funcoes';
 import { Tarefa } from 'src/app/interfaces/tarefa';
@@ -21,6 +21,7 @@ export class CadastroTarefaComponent implements OnInit {
     private formBuilder: FormBuilder,
     private service: TarefasService,
     private router: Router,
+    private route: ActivatedRoute,
     private helper: FuncoesHelpers
   ) {
     this.subscription = this.service.edicao$.subscribe({
@@ -53,7 +54,7 @@ export class CadastroTarefaComponent implements OnInit {
 
   cadastrarTarefa(): void {
     this.service.cadastrar(this.formulario.value.descricao).subscribe({
-      next: () => this.router.navigate(['/tarefas/criadas']),
+      next: () => this.atualizarDadosTarefas(),
       error: () => this.helper.notificar("Erro", "Não foi possivel cadastrar a tarefa")
     })
   }
@@ -63,7 +64,7 @@ export class CadastroTarefaComponent implements OnInit {
     tarefa.descricao = this.formulario.value.descricao
     this.service.atualizar(tarefa).subscribe({
       next: () => {
-        this.router.navigate(['/tarefas/criadas'])
+        this.atualizarDadosTarefas()
         this.edicao = false
       },
       error: () => {
@@ -76,5 +77,9 @@ export class CadastroTarefaComponent implements OnInit {
   cancelarEdicao(): void {
     this.formulario.reset()
     this.edicao = false
+  }
+
+  atualizarDadosTarefas() {
+    this.router.navigate(['/tarefas', this.route.snapshot.url[1].path])
   }
 }

@@ -1,6 +1,7 @@
 <main>
   <app-cadastro-tarefa></app-cadastro-tarefa>
   <app-resumo-tarefa [resumoQuantidadeTarefas]="resumoQuantidadeTarefas"></app-resumo-tarefa>
-  <app-filtro-tarefa (aoFiltrar)="listarTarefas($event)" ></app-filtro-tarefa>
-  <app-lista-tarefa [listaTarefas]="listaTarefas" [statusTarefas]="statusTarefas" [filtroAtivo]="filtroAtivo"></app-lista-tarefa>
+  <app-filtro-tarefa (aoFiltrar)="listarTarefas($event)"></app-filtro-tarefa>
+  <app-lista-tarefa [listaTarefas]="listaTarefas" [statusTarefas]="statusTarefas" [filtroAtivo]="filtroAtivo"
+    [haMaisTarefas]="haMaisTarefas"></app-lista-tarefa>
 </main>

@@ -5,6 +5,12 @@ using Todolist.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.Configure<RouteOptions>(options =>
+{
+    options.LowercaseUrls = true;
+    options.LowercaseQueryStrings = true;
+});
+
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<TarefaContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("TarefaConnection")));
 
@@ -31,17 +37,14 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(opt =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    opt.SwaggerEndpoint("/swagger/v1/swagger.json", "TodolisAPI v1");
+});
 
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.UseCors(MyAllowSpecificOrigins);
-
 
 app.Run();

@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 import { Tarefa } from 'src/app/interfaces/tarefa';
 import { TarefasService } from 'src/app/services/tarefas.service';
 import { FuncoesHelpers } from 'src/app/helpers/funcoes';
+import { STATUS_ANDAMENTO, STATUS_CONCLUIDA } from 'src/app/constants/status-tarefa';
 
 @Component({
   selector: 'app-tarefa',
@@ -11,6 +12,7 @@ import { FuncoesHelpers } from 'src/app/helpers/funcoes';
 })
 export class TarefaComponent {
   @Input() tarefa!: Tarefa;
+  statusConcluido = STATUS_CONCLUIDA;
 
   constructor(
     private service: TarefasService,
@@ -39,14 +41,18 @@ export class TarefaComponent {
   }
 
   alterarStatus(): void {
-    this.tarefa.concluida = !this.tarefa.concluida;
-    this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
+    this.tarefa.status = this.tarefa.status === STATUS_ANDAMENTO
+      ? STATUS_CONCLUIDA
+      : STATUS_ANDAMENTO;
+    this.tarefa.dataConclusao = this.tarefa.status === STATUS_CONCLUIDA ? new Date().getTime().toString() : '';
     this.service.atualizar(this.tarefa).subscribe({
       next: () => this.atualizarDadosTarefas(),
       error: () => {
         this.helper.notificar("Erro", "Não foi possivel alterar o status da tarefa");
-        this.tarefa.concluida = !this.tarefa.concluida;
-        this.tarefa.dataConclusao = this.tarefa.concluida ? new Date().getTime().toString() : '';
+        this.tarefa.status = this.tarefa.status === STATUS_ANDAMENTO
+          ? STATUS_CONCLUIDA
+          : STATUS_ANDAMENTO;
+        this.tarefa.dataConclusao = this.tarefa.status === STATUS_CONCLUIDA ? new Date().getTime().toString() : '';
       }
     })
   }

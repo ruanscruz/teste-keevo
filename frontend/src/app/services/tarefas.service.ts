@@ -3,8 +3,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Tarefa } from '../interfaces/tarefa';
 import { Observable, Subject } from 'rxjs';
-
-
+import { STATUS_ANDAMENTO } from '../constants/status-tarefa';
 
 @Injectable({
   providedIn: 'root'
@@ -20,16 +19,21 @@ export class TarefasService {
     this.edicaoSource.next(tarefa);
   }
 
-  buscar(): Observable<Tarefa[]> {
-    return this.httpClient.get<Tarefa[]>(this.API_TAREFAS);
+  buscar(status: string): Observable<Tarefa[]> {
+    let params = new HttpParams();
+    if (status !== "criadas") {
+      params = params.set('status', status);
+    }
+
+    return this.httpClient.get<Tarefa[]>(this.API_TAREFAS, { params });
   }
 
   cadastrar(descricao: string): Observable<Tarefa> {
     const tarefa = {
       descricao,
+      status: STATUS_ANDAMENTO,
       dataCriacao: new Date().getTime().toString(),
       dataConclusao: '',
-      concluida: false
     }
     return this.httpClient.post<Tarefa>(`${this.API_TAREFAS}`, tarefa)
   }
