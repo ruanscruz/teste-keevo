@@ -19,12 +19,13 @@ public class TarefaController : Controller
     }
 
     /// <summary>
-    /// Listar as tarefas cadastradas
+    /// Listar tarefas
     /// </summary>
-    /// <param name="status">Filtro para listar tarefas por status</param>
-    /// <returns>IEnumerable<ReadTarefaDto></returns>
-    /// <response code="200">Retorna uma lista de tarefas</response>
+    /// <param name="status">Poderá ser consultada por status da tarefa</param>
+    /// <returns>IActionResult</returns>
+    /// <response code="200">Caso as tarefas seja encontrada com sucesso</response>
     [HttpGet]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<ReadTarefaDto> ListarTarefas([FromQuery] string ?status = "")
     {   
         if(status == "")return _mapper.Map<List<ReadTarefaDto>>(_context.Tarefas);
@@ -40,6 +41,7 @@ public class TarefaController : Controller
     /// <response code="200">Caso a tarefa seja encontrada com sucesso</response>
     /// <response code="404">Caso a tarefa não seja encontrada</response>
     [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public IActionResult ObterTarefa(int id)
     {
         Tarefa? tarefa = _context.Tarefas.FirstOrDefault(tarefa => tarefa.Id == id);
@@ -73,6 +75,7 @@ public class TarefaController : Controller
     /// <response code="204">Caso alteração seja feita com sucesso</response>
     /// <response code="404">Caso a tarefa não seja encontrada</response>
     [HttpPut("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     public IActionResult AtualizarTarefa(int id, [FromBody] UpdateTarefaDto tarefaDto)
     {
         Tarefa? tarefa = _context.Tarefas.FirstOrDefault(tarefa => tarefa.Id == id);
@@ -90,6 +93,7 @@ public class TarefaController : Controller
     /// <response code="204">Caso alteração seja feita com sucesso</response>
     /// <response code="404">Caso a tarefa não seja encontrada</response>
     [HttpDelete("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
     public IActionResult DeletarTarefa(int id)
     {
         Tarefa? tarefa = _context.Tarefas.FirstOrDefault(tarefa => tarefa.Id == id);
